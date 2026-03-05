@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import questions from '../data/questions';
 import IntroScreen from './IntroScreen';
 import QuizScreen from './QuizScreen';
@@ -8,10 +8,13 @@ import '../styles/pirate.css';
 const TEAM_A = "Équipage A";
 const TEAM_B = "Équipage B";
 
+const MAX_PER_TEAM = Math.floor(questions.length / 2);
+
 export default function PirateQuiz() {
   const [screen, setScreen] = useState("intro");
   const [teamAName, setTeamAName] = useState(TEAM_A);
   const [teamBName, setTeamBName] = useState(TEAM_B);
+  const [questionsPerTeam, setQuestionsPerTeam] = useState(MAX_PER_TEAM);
   const [current, setCurrent] = useState(0);
   const [currentTeam, setCurrentTeam] = useState("A");
   const [scores, setScores] = useState({ A: 0, B: 0 });
@@ -22,9 +25,15 @@ export default function PirateQuiz() {
   const [correctFlash, setCorrectFlash] = useState(false);
   const [shuffled, setShuffled] = useState([]);
 
-  useEffect(() => {
-    setShuffled([...questions].sort(() => Math.random() - 0.5));
-  }, []);
+  const shuffleQuestions = (perTeam) => {
+    const all = [...questions].sort(() => Math.random() - 0.5);
+    return all.slice(0, perTeam * 2);
+  };
+
+  const startGame = () => {
+    setShuffled(shuffleQuestions(questionsPerTeam));
+    setScreen("quiz");
+  };
 
   const currentTeamName = currentTeam === "A" ? teamAName : teamBName;
 
@@ -54,7 +63,7 @@ export default function PirateQuiz() {
   };
 
   const restart = () => {
-    setShuffled([...questions].sort(() => Math.random() - 0.5));
+    setShuffled(shuffleQuestions(questionsPerTeam));
     setCurrent(0);
     setCurrentTeam("A");
     setScores({ A: 0, B: 0 });
@@ -69,9 +78,11 @@ export default function PirateQuiz() {
       <IntroScreen
         teamAName={teamAName}
         teamBName={teamBName}
+        questionsPerTeam={questionsPerTeam}
         onTeamAChange={v => setTeamAName(v || TEAM_A)}
         onTeamBChange={v => setTeamBName(v || TEAM_B)}
-        onStart={() => setScreen("quiz")}
+        onQuestionsPerTeamChange={setQuestionsPerTeam}
+        onStart={startGame}
       />
     );
   }

@@ -119,6 +119,86 @@ const questions = [
     hint: "Ils fumaient de la viande sur des grils appelés boucans",
     penalty: "Bois 1 seconde !"
   },
+  // --- Pirates célèbres ---
+  {
+    q: "Quelles sont les deux femmes pirates les plus célèbres qui naviguaient avec Calico Jack ?",
+    a: "Anne Bonny et Mary Read",
+    hint: "Elles se déguisaient en hommes sur le même navire",
+    penalty: "Bois 1 seconde !"
+  },
+  {
+    q: "Quel surnom portait le pirate Jack Rackham, connu pour ses vêtements colorés ?",
+    a: "Calico Jack",
+    hint: "Son surnom vient du tissu de ses vêtements...",
+    penalty: "Bois 1 seconde !"
+  },
+  {
+    q: "Quel célèbre pirate avait pour habitude d'allumer des mèches dans sa barbe pour terroriser ses ennemis ?",
+    a: "Barbe-Noire (Edward Teach)",
+    hint: "Barbe-Noire",
+    penalty: "Bois 1 seconde !"
+  },
+  // --- Pirates réels × One Piece ---
+  {
+    q: "Quel pirate réel a inspiré le personnage de Barbe Noire (Marshall D. Teach) dans One Piece ?",
+    a: "Edward Teach (Barbe-Noire)",
+    hint: "Même nom de famille... Teach",
+    penalty: "Bois 1 seconde !"
+  },
+  {
+    q: "Quel pirate réel a inspiré le personnage de Jewelry Bonney dans One Piece ?",
+    a: "Anne Bonny",
+    hint: "Bonney... Bonny... une femme pirate célèbre",
+    penalty: "Bois 1 seconde !"
+  },
+  {
+    q: "Quel pirate réel a inspiré le personnage d'Eustass Kid dans One Piece ?",
+    a: "William Kidd (Captain Kidd)",
+    hint: "Kid... Kidd... un capitaine célèbre",
+    penalty: "Bois 1 seconde !"
+  },
+  {
+    q: "Quel pirate réel a inspiré le nom de Bartholomew Kuma dans One Piece ?",
+    a: "Bartholomew Roberts (Black Bart)",
+    hint: "Le plus grand pirate de l'âge d'or... Bartholomew",
+    penalty: "Bois 1 seconde !"
+  },
+  {
+    q: "Quel pirate réel a inspiré le personnage de X Drake dans One Piece ?",
+    a: "Francis Drake",
+    hint: "Sir... un corsaire anglais qui a fait le tour du monde",
+    penalty: "Bois 1 seconde !"
+  },
+  {
+    q: "Quel pirate réel a inspiré le personnage de Basil Hawkins dans One Piece ?",
+    a: "John Hawkins",
+    hint: "Un navigateur et marchand anglais du XVIe siècle",
+    penalty: "Bois 1 seconde !"
+  },
+  {
+    q: "Quel corsaire réel a inspiré le personnage de Roronoa Zoro dans One Piece ?",
+    a: "François l'Olonnais (pirate cruel des Caraïbes)",
+    hint: "Zoro... l'Olonnais... et un autre célèbre escrimeur masqué",
+    penalty: "Bois 1 seconde !"
+  },
+  {
+    q: "Quel pirate réel a inspiré le personnage de Scratchmen Apoo dans One Piece ?",
+    a: "Chui A-poo (pirate chinois du XIXe siècle)",
+    hint: "Un pirate chinois... Apoo",
+    penalty: "Bois 1 seconde !"
+  },
+  {
+    q: "Quel pirate réel a inspiré le personnage de Capone Bege dans One Piece ?",
+    a: "Al Capone (gangster) et William Le Sauvage",
+    hint: "Un célèbre gangster de Chicago...",
+    penalty: "Bois 1 seconde !"
+  },
+  {
+    q: "Quel pirate réel a inspiré le personnage d'Alvida dans One Piece ?",
+    a: "Awilda (femme pirate scandinave légendaire)",
+    hint: "Alvida... Awilda... une femme pirate du Nord",
+    penalty: "Bois 1 seconde !"
+  },
 ];
 
 export default questions;
